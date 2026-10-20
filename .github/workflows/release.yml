@@ -52,8 +52,8 @@ jobs:
       - name: Test Linux AppImage with inherited Node mode
         if: runner.os == 'Linux'
         run: |
-          chmod +x artifacts/Numi-1.0.0-linux-x64.AppImage
-          ELECTRON_RUN_AS_NODE=1 xvfb-run -a artifacts/Numi-1.0.0-linux-x64.AppImage --appimage-extract-and-run --no-sandbox --smoke-test
+          chmod +x artifacts/Numi-1.0.0-linux-x86_64.AppImage
+          ELECTRON_RUN_AS_NODE=1 xvfb-run -a artifacts/Numi-1.0.0-linux-x86_64.AppImage --appimage-extract-and-run --no-sandbox --smoke-test
       - name: Package Windows
         if: runner.os == 'Windows'
         run: npx electron-builder --win nsis portable zip --x64 --publish never

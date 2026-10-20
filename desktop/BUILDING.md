@@ -11,7 +11,7 @@ npm test
 npm run appimage
 ```
 
-`npm run appimage` writes `artifacts/Numi-1.0.0-linux-x64.AppImage`. Run it with `chmod +x artifacts/Numi-1.0.0-linux-x64.AppImage && ./artifacts/Numi-1.0.0-linux-x64.AppImage`.
+`npm run appimage` writes `artifacts/Numi-1.0.0-linux-x86_64.AppImage`. Run it with `chmod +x artifacts/Numi-1.0.0-linux-x86_64.AppImage && ./artifacts/Numi-1.0.0-linux-x86_64.AppImage`.
 
 Packaged builds disable Electron's RunAsNode fuse so they open normally even when a terminal or file manager passes down `ELECTRON_RUN_AS_NODE=1`.
 

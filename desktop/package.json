@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "nyko",
   "description": "Numi desktop calculator, restored from the 0.1.15 release.",
+  "homepage": "https://github.com/MX-Goliath/numi",
   "main": "main.js",
   "license": "Commercial",
   "scripts": {
