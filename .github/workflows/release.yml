@@ -76,3 +76,73 @@ jobs:
             desktop/artifacts/*.tar.gz
             desktop/artifacts/*.exe
             desktop/artifacts/*.zip
+
+  publish:
+    name: Publish v1.0
+    needs: build
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    permissions:
+      actions: read
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: numi-*-x64
+          merge-multiple: true
+          path: release
+      - name: Prepare checksums and release notes
+        env:
+          RELEASE_NOTES: |
+            Numi desktop v1.0 restores the Electron/React desktop calculator with its Rust calculation engine.
+
+            Changes:
+            - Offline arithmetic, variables, functions, dates, and unit conversions.
+            - Wave conversions between frequency, period, wavelength, angular frequency, and wave number. Wavelength conversions assume propagation in vacuum.
+            - Currency rates refresh when a network connection is available.
+            - Fixed startup from file managers that inherit ELECTRON_RUN_AS_NODE=1.
+
+            Downloads for x86-64:
+            - Windows: NSIS installer, portable executable, and ZIP archive.
+            - Linux: AppImage, DEB, RPM, and tar.gz archive.
+            - SHA256SUMS.txt contains checksums for every download.
+
+            Windows builds are unsigned. Linux packages are built on Ubuntu 22.04. Both platforms pass calculator engine tests and packaged-app startup checks covering the interface, native bridge, and unit/wave conversions.
+
+            For AppImage, enable execution permission with chmod +x before launching it. Source build instructions are in desktop/BUILDING.md.
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import os
+          from pathlib import Path
+          files = sorted(Path('release').iterdir())
+          if len(files) != 7 or {p.suffix for p in files} != {'.AppImage', '.deb', '.rpm', '.gz', '.zip', '.exe'}:
+              raise SystemExit('Expected seven Windows and Linux release packages')
+          checksums = []
+          for package in files:
+              digest = hashlib.sha256()
+              with package.open('rb') as source:
+                  for chunk in iter(lambda: source.read(1024 * 1024), b''):
+                      digest.update(chunk)
+              checksums.append(f'{digest.hexdigest()}  {package.name}\n')
+          Path('release/SHA256SUMS.txt').write_text(''.join(checksums))
+          build_url = f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+          notes = os.environ['RELEASE_NOTES'] + f'\nBuild and test results: {build_url}\n'
+          (Path(os.environ['RUNNER_TEMP']) / 'numi-release-notes.md').write_text(notes)
+          PY
+      - name: Upload and publish release
+        run: |
+          if gh release view v1.0 --json isDraft --jq .isDraft > "$RUNNER_TEMP/numi-release-draft" 2>/dev/null; then
+            if [ "$(cat "$RUNNER_TEMP/numi-release-draft")" != true ]; then
+              echo 'Release v1.0 is already published; refusing to replace its files.'
+              exit 1
+            fi
+          else
+            gh release create v1.0 --target "$GITHUB_SHA" --title 'Numi v1.0' --notes-file "$RUNNER_TEMP/numi-release-notes.md" --draft
+          fi
+          gh release upload v1.0 release/* --clobber
+          gh release edit v1.0 --draft=false --latest --notes-file "$RUNNER_TEMP/numi-release-notes.md"
