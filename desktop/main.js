@@ -45,6 +45,7 @@ async function smokeTest() {
   const timeout = setTimeout(() => { console.error('Smoke test timed out'); app.exit(1); }, 15000);
   try {
     if (win.webContents.isLoading()) await new Promise(resolve => win.webContents.once('did-finish-load', resolve));
+    if (!win.isVisible()) await new Promise(resolve => win.once('show', resolve));
     const result = await win.webContents.executeJavaScript(`(async () => {
       const deadline = Date.now() + 10000;
       while (!document.querySelector('textarea') || !document.querySelector('.version')?.textContent.includes('${app.getVersion()}')) {
