@@ -15,6 +15,8 @@ npm run appimage
 
 Packaged builds disable Electron's RunAsNode fuse so they open normally even when a terminal or file manager passes down `ELECTRON_RUN_AS_NODE=1`.
 
+Linux AppImage builds also need `readelf` from binutils and `zsyncmake` from zsync. The build embeds `gh-releases-zsync|MX-Goliath|numi|latest|Numi-*-linux-x86_64.AppImage.zsync` in the AppImage's standard `.upd_info` section and generates a matching `.AppImage.zsync` file. Publish both files in the same GitHub Release so external AppImage update tools can find updates. Inspect the embedded channel with `./artifacts/Numi-1.0.0-linux-x86_64.AppImage --appimage-updateinformation`. The application itself does not check for or install updates.
+
 On Windows, run `npm run windows` from a Windows checkout with Rust and the MSVC build tools. That builds the native `.node` module for Windows and creates an NSIS installer, a portable executable, and a ZIP archive. The source does not depend on the release archive or the original update servers.
 
 Run `npm run linux` to build AppImage, DEB, RPM, and tar.gz packages for Linux x64. DEB and RPM packaging needs the distribution packaging tools.

@@ -41,7 +41,7 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libssl-dev pkg-config rpm xvfb
+          sudo apt-get install -y libssl-dev pkg-config rpm xvfb binutils zsync
       - run: npm ci
       - run: npm run build
       - run: npm test
@@ -71,6 +71,7 @@ jobs:
           retention-days: 14
           path: |
             desktop/artifacts/*.AppImage
+            desktop/artifacts/*.AppImage.zsync
             desktop/artifacts/*.deb
             desktop/artifacts/*.rpm
             desktop/artifacts/*.tar.gz
@@ -120,8 +121,12 @@ jobs:
           import os
           from pathlib import Path
           files = sorted(Path('release').iterdir())
-          if len(files) != 7 or {p.suffix for p in files} != {'.AppImage', '.deb', '.rpm', '.gz', '.zip', '.exe'}:
+          packages = [p for p in files if p.suffix != '.zsync']
+          if len(packages) != 7 or {p.suffix for p in packages} != {'.AppImage', '.deb', '.rpm', '.gz', '.zip', '.exe'}:
               raise SystemExit('Expected seven Windows and Linux release packages')
+          appimage = next(p for p in packages if p.suffix == '.AppImage')
+          if not appimage.with_name(appimage.name + '.zsync').is_file():
+              raise SystemExit('Missing AppImage update control file')
           checksums = []
           for package in files:
               digest = hashlib.sha256()
