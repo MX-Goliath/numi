@@ -1,4 +1,26 @@
 # macOS
 .DS_Store
 
+# Release archives and recovery files
 *.alfredworkflow
+/.recovery/
+/Numi.zip
+/electron_win32_x64_numi-*-setup.exe
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.log
+
+# Dependencies and compiled native modules
+node_modules/
+target/
+*.node
+
+# Desktop build outputs
+/desktop/dist/
+/desktop/out/
+/desktop/artifacts/
+/desktop/squashfs-root/

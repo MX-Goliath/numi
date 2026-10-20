@@ -1,0 +1,15 @@
+[package]
+name = "numi-cli"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4.1.6", features = ["derive"] }
+numi = { path = "../" }
+env_logger = "0"
+log = "0"
+
+[features]
+rustls = ["numi/rustls"]
+default-tls = ["numi/default-tls"]

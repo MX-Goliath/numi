@@ -1,0 +1,20 @@
+[package]
+name = "nnn"
+version = "0.1.0"
+license = "ISC"
+edition = "2021"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+neon = "1"
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+numi = { path = "./numi-rs/", features = ["default-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"

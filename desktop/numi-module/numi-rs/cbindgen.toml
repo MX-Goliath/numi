@@ -1,0 +1,8 @@
+# Reference: https://github.com/eqrion/cbindgen/blob/master/docs.md
+
+language = "C"
+no_includes = true
+cpp_compat = false
+
+[export]
+item_types = ["constants", "functions"]

@@ -1,0 +1,13 @@
+const { spawnSync } = require('node:child_process');
+const { copyFileSync } = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const result = spawnSync('cargo', ['build', '--locked', '--release', '--message-format=json-render-diagnostics', '--manifest-path', path.join(root, 'numi-module/Cargo.toml')], { encoding: 'utf8', stdio: ['inherit', 'pipe', 'inherit'], maxBuffer: 16 * 1024 * 1024 });
+if (result.error) throw result.error;
+if (result.status !== 0) process.exit(result.status || 1);
+const artifacts = result.stdout.split('\n').filter(Boolean).map(line => JSON.parse(line));
+const native = artifacts.findLast(item => item.reason === 'compiler-artifact' && item.target.name === 'nnn');
+const library = native?.filenames.find(file => /\.(so|dylib|dll)$/.test(file));
+if (!library) throw new Error('Cargo did not produce the Numi native library.');
+copyFileSync(library, path.join(root, 'numi-module/index.node'));
+console.log(`Built native engine for ${process.platform}/${process.arch}`);

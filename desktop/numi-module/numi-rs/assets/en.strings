@@ -1,0 +1,1544 @@
+/* Radian variants */
+"radian.variants" = "radian,rad,radians";
+
+/* Radian format */
+"radian.format" = "rad";
+
+/* Degree variants */
+"degree.variants" = "degree,°,degrees,arcdegree";
+
+/* Degree format */
+"degree.format" = "°";
+
+/* Ping unit variants */
+"ping.variants" = "ping,píng,pings,píngs";
+
+/* Ping unit format */
+"ping.format" = "píng";
+/* Area templates for compound area units (like square meter, square inch etc), comma separated. Use %@ as a placeholder. For example, 'square %@' become 'square meter' for meters */
+"area.templates" = "square %@,sq %@,sq%@,%@²,%@ ²,%@2";
+
+/* Area format for compound units (like square meter, square inch etc). Use %@ as a placeholder. For example, '%@²' become 'm²' for meters */
+"area.format" = "%@²";
+
+/* Acre variants */
+"acre.variants" = "acre,acres";
+
+/* Acre format */
+"acre.format" = "acre";
+
+/* Hectare variants */
+"hectare.variants" = "hectare,hectares,ha";
+
+/* Hectare format */
+"hectare.format" = "ha";
+
+/* Are unit variants */
+"are.variants" = "a,are,ares";
+
+/* Are unit format */
+"are.format" = "a";
+
+/* Pixel variants */
+"pixel.variants" = "pixel,pixels,px,px.";
+
+/* Pixel format */
+"pixel.format" = "px";
+
+/* Em variants */
+"em.variants" = "em,ems";
+
+/* Em format */
+"em.format" = "em";
+
+/* BYN currency format */
+"BYN.format" = "%@ BYN";
+
+/* BYN currency variants */
+"BYN.variants" = "Belarusian ruble,Belarusian rubles,bel. ruble,bel rubles";
+/* AED currency variants */
+"AED.variants" = "United Arab Emirates dirham,Dirham,Dirhams,UAE Dirham,UAE Dirhams,Dhs,د.إ";
+
+/* AED currency format */
+"AED.format" = "%@ Dh";
+
+/* AFN currency variants */
+"AFN.variants" = "Afgani,Afgan Afgani,Afs,؋,Af";
+
+/* AFN currency format */
+"AFN.format" = "%@ Af";
+
+/* ALL currency variants */
+"ALL.variants" = "Lek,Albanian Lek,Albanian Leks";
+
+/* ALL currency format */
+"ALL.format" = "%@ L";
+
+/* AMD currency variants */
+"AMD.variants" = "Armenian Dram,Dram,Drams,Armenian Drams,Դ";
+
+/* AMD currency format */
+"AMD.format" = "%@ Դ";
+
+/* ANG currency variants */
+"ANG.variants" = "Netherlands Antillean Guilders,Netherlands Antillean Guilder,Guilder,Guilders,NAƒ,NAf,ƒ";
+
+/* ANG currency format */
+"ANG.format" = "ƒ %@";
+
+/* AOA currency variants */
+"AOA.variants" = "Angolan Kwanzas,Angolan Kwanza,Kwanza,Kwanzas,Kz";
+
+/* AOA currency format */
+"AOA.format" = "%@ Kz";
+
+/* ARS currency variants */
+"ARS.variants" = "Argentine Peso,Argentine Pesos";
+
+/* ARS currency format */
+"ARS.format" = "%@ ARS";
+
+/* AUD currency variants */
+"AUD.variants" = "Australian Dollars,Australian Dollar";
+
+/* AUD currency format */
+"AUD.format" = "$%@ AUD";
+
+/* AWG currency variants */
+"AWG.variants" = "Aruban florin,florin,Afl.";
+
+/* AWG currency format */
+"AWG.format" = "%@ Afl.";
+
+/* AZN currency variants */
+"AZN.variants" = "Azerbaijani Manats,Azerbaijani Manat,Manat,Manats,man.";
+
+/* AZN currency format */
+"AZN.format" = "%@ man.";
+
+/* BAM currency variants */
+"BAM.variants" = "Bosnia and Herzegovina convertible mark,Bosnia and Herzegovina convertible marks,convertible mark,convertible marks,Maraka";
+
+/* BAM currency format */
+"BAM.format" = "%@ KM";
+
+/* BBD currency variants */
+"BBD.variants" = "Barbados Dollars,Barbados Dollar";
+
+/* BBD currency format */
+"BBD.format" = "%@ BBD";
+
+/* BDT currency variants */
+"BDT.variants" = "Bangladeshi Takas,Bangladeshi Taka,Takas,Taka,Tk,৳";
+
+/* BDT currency format */
+"BDT.format" = "%@ Tk";
+
+/* BGN currency variants */
+"BGN.variants" = "Bulgarian Levs,Bulgarian Lev,Lev,Leva,Bulgarian Leva,лв.";
+
+/* BGN currency format */
+"BGN.format" = "%@ лв.";
+
+/* BHD currency variants */
+"BHD.variants" = "Bahraini Dinars,Bahraini Dinar,.د.ب,BD";
+
+/* BHD currency format */
+"BHD.format" = "%@ BD";
+
+/* BIF currency variants */
+"BIF.variants" = "Burundi Francs,Burundi Franc,Burundian franc,Burundian francs,FBu";
+
+/* BIF currency format */
+"BIF.format" = "%@ FBu";
+
+/* BMD currency variants */
+"BMD.variants" = "Bermudian Dollars,Bermudian Dollar,BD$";
+
+/* BMD currency format */
+"BMD.format" = "$ %@";
+
+/* BND currency variants */
+"BND.variants" = "Brunei Dollars,Brunei Dollar";
+
+/* BND currency format */
+"BND.format" = "B$ %@";
+
+/* BOB currency variants */
+"BOB.variants" = "Bolivian Bolivianos,Bolivian Boliviano,Bolivianos,Boliviano,Bs";
+
+/* BOB currency format */
+"BOB.format" = "Bs %@";
+
+/* BRL currency variants */
+"BRL.variants" = "Brazilian Reals,Brazilian Real,R$";
+
+/* BRL currency format */
+"BRL.format" = "R$ %@";
+
+/* BSD currency variants */
+"BSD.variants" = "Bahamian Dollars,Bahamian Dollar";
+
+/* BSD currency format */
+"BSD.format" = "B$ %@";
+
+/* BTC currency variants */
+"BTC.variants" = "Bitcoins,Bitcoin,B⃦,xbt";
+
+/* BTC currency format */
+"BTC.format" = "%@ B⃦";
+
+/* BTN currency variants */
+"BTN.variants" = "Bhutanese Ngultrum,Ngultrum,Bhutanese Ngultrums,Ngultrums,Nu.";
+
+/* BTN currency format */
+"BTN.format" = "Nu. %@";
+
+/* BWP currency variants */
+"BWP.variants" = "Botswana Pula,Pula";
+
+/* BWP currency format */
+"BWP.format" = "%@ BWP";
+
+/* BYR currency variants */
+"BYR.variants" = "BYR";
+
+/* BYR currency format */
+"BYR.format" = "%@ BYR";
+
+/* BZD currency variants */
+"BZD.variants" = "Belize Dollars,Belize Dollar,BZ$";
+
+/* BZD currency format */
+"BZD.format" = "BZ$ %@";
+
+/* CAD currency variants */
+"CAD.variants" = "Canadian Dollars,Canadian Dollar,CA$,$ CAD,$CAD";
+
+/* CAD currency format */
+"CAD.format" = "$%@ CAD";
+
+/* CDF currency variants */
+"CDF.variants" = "Congolese Francs,Congolese Franc,FC";
+
+/* CDF currency format */
+"CDF.format" = "%@ FC";
+
+/* CHF currency variants */
+"CHF.variants" = "Swiss Francs,Swiss Franc,SFr.";
+
+/* CHF currency format */
+"CHF.format" = "%@ SFr.";
+
+/* CLP currency variants */
+"CLP.variants" = "Chilean Pesos,Chilean Peso";
+
+/* CLP currency format */
+"CLP.format" = "%@ CLP";
+
+/* CNY currency variants */
+"CNY.variants" = "Chinese Yuans,Chinese Yuan,yuan,yuans,元,RMB";
+
+/* CNY currency format */
+"CNY.format" = "%@ ¥";
+
+/* COP currency variants */
+"COP.variants" = "Colombian Pesos,Colombian Peso";
+
+/* COP currency format */
+"COP.format" = "$%@ COP";
+
+/* CRC currency variants */
+"CRC.variants" = "Costa Rican Colones,Costa Rican Colon,Colon,Colones";
+
+/* CRC currency format */
+"CRC.format" = "%@ ₡";
+
+/* CUP currency variants */
+"CUP.variants" = "Cuban Pesos,Cuban Peso,$MN";
+
+/* CUP currency format */
+"CUP.format" = "$MN %@";
+
+/* CVE currency variants */
+"CVE.variants" = "Cape Verdean Escudos,Cape Verdean Escudo,Escudos,Escudo,Esc";
+
+/* CVE currency format */
+"CVE.format" = "%@ CVE";
+
+/* CZK currency variants */
+"CZK.variants" = "Czech Korunas,Czech Koruna,Kč";
+
+/* CZK currency format */
+"CZK.format" = "%@ Kč";
+
+/* DJF currency variants */
+"DJF.variants" = "Djibouti Francs,Djibouti Franc,Djiboutian Francs,Djiboutian Franc,Fdj";
+
+/* DJF currency format */
+"DJF.format" = "%@ Fdj";
+
+/* DKK currency variants */
+"DKK.variants" = "Danish Kroner,Danish Krone,kr.";
+
+/* DKK currency format */
+"DKK.format" = "%@ kr.";
+
+/* DOP currency variants */
+"DOP.variants" = "Dominican Pesos,Dominican Peso,RD$";
+
+/* DOP currency format */
+"DOP.format" = "RD$ %@";
+
+/* DZD currency variants */
+"DZD.variants" = "Algerian Dinars,Algerian Dinar,دج";
+
+/* DZD currency format */
+"DZD.format" = "%@ DA";
+
+/* EGP currency variants */
+"EGP.variants" = "Egyptian Pounds,Egyptian Pound";
+
+/* EGP currency format */
+"EGP.format" = "£%@ EGP";
+
+/* ERN currency variants */
+"ERN.variants" = "Eritrean nakfa,Nakfa,Nfk";
+
+/* ERN currency format */
+"ERN.format" = "%@ Nfk";
+
+/* ETB currency variants */
+"ETB.variants" = "Ethiopian Birr,Birr";
+
+/* ETB currency format */
+"ETB.format" = "%@ Br";
+
+/* EUR currency variants */
+"EUR.variants" = "Euro,€";
+
+/* EUR currency format */
+"EUR.format" = "€ %@";
+
+/* FJD currency variants */
+"FJD.variants" = "Fiji Dollars,Fiji Dollar,Fijian Dollars,Fijian Dollar,FJ$";
+
+/* FJD currency format */
+"FJD.format" = "FJ$ %@";
+
+/* FKP currency variants */
+"FKP.variants" = "Falkland Islands Pounds,Falkland Islands Pound,Falkland Pounds";
+
+/* FKP currency format */
+"FKP.format" = "£ %@";
+
+/* GBP currency variants */
+"GBP.variants" = "Pound sterling,Pounds sterling,£,￡,british pound,british pounds";
+
+/* GBP currency format */
+"GBP.format" = "£ %@";
+
+/* GEL currency variants */
+"GEL.variants" = "Lari,Georgian Lari";
+
+/* GEL currency format */
+"GEL.format" = "%@ lari";
+
+/* GHS currency variants */
+"GHS.variants" = "Ghana Cedi,Cedi,GH₵";
+
+/* GHS currency format */
+"GHS.format" = "GH₵ %@";
+
+/* GIP currency variants */
+"GIP.variants" = "Gibraltar Pounds,Gibraltar Pound";
+
+/* GIP currency format */
+"GIP.format" = "%@ GIP";
+
+/* GMD currency variants */
+"GMD.variants" = "Gambian Dalasi,Dalasi,Gambian Dalasis,Dalasis";
+
+/* GMD currency format */
+"GMD.format" = "%@ D";
+
+/* GNF currency variants */
+"GNF.variants" = "Guinean franc,Guinean francs";
+
+/* GNF currency format */
+"GNF.format" = "%@ FG";
+
+/* GTQ currency variants */
+"GTQ.variants" = "Guatemalan Quetzales,Guatemalan quetzal,Quetzal,Quetzales";
+
+/* GTQ currency format */
+"GTQ.format" = "%@ Q";
+
+/* GYD currency variants */
+"GYD.variants" = "Guyanese dollar,Guyanese dollars,G$";
+
+/* GYD currency format */
+"GYD.format" = "G$ %@";
+
+/* HKD currency variants */
+"HKD.variants" = "Hong Kong Dollar,Hong Kong Dollars,HK$";
+
+/* HKD currency format */
+"HKD.format" = "HK$ %@";
+
+/* HNL currency variants */
+"HNL.variants" = "Honduran Lempira,Honduran Lempiras,Lempira,Lempiras";
+
+/* HNL currency format */
+"HNL.format" = "L %@";
+
+/* HRK currency variants */
+"HRK.variants" = "Croatian Kuna,Kuna";
+
+/* HRK currency format */
+"HRK.format" = "%@ Kn";
+
+/* HTG currency variants */
+"HTG.variants" = "Haitian Gourdes,Haitian Gourde,Gourdes,Gourde";
+
+/* HTG currency format */
+"HTG.format" = "%@ G";
+
+/* HUF currency variants */
+"HUF.variants" = "Hungarian Forint,Forint";
+
+/* HUF currency format */
+"HUF.format" = "%@ Ft";
+
+/* IDR currency variants */
+"IDR.variants" = "Indonesian Rupiah,Rp";
+
+/* IDR currency format */
+"IDR.format" = "Rp %@";
+
+/* ILS currency variants */
+"ILS.variants" = "Israeli new shekel,new shekalim,new sheqalim,₪,NIS";
+
+/* ILS currency format */
+"ILS.format" = "%@ NIS";
+
+/* INR currency variants */
+"INR.variants" = "Indian Rupee";
+
+/* INR currency format */
+"INR.format" = "INR %@";
+
+/* IQD currency variants */
+"IQD.variants" = "Iraqi Dinars,Iraqi Dinar,ع.د";
+
+/* IQD currency format */
+"IQD.format" = "%@ IQD";
+
+/* IRR currency variants */
+"IRR.variants" = "Iranian Rial,Iranian Rials,IR";
+
+/* IRR currency format */
+"IRR.format" = "%@ IR";
+
+/* ISK currency variants */
+"ISK.variants" = "Icelandic krona,Icelandic kronas,Iceland Krona,Iceland Kronas";
+
+/* ISK currency format */
+"ISK.format" = "%@ kr";
+
+/* JMD currency variants */
+"JMD.variants" = "Jamaican Dollar,Jamaican Dollars";
+
+/* JMD currency format */
+"JMD.format" = "%@ JMD";
+
+/* JOD currency variants */
+"JOD.variants" = "Jordanian Dinars,Jordanian Dinar,دينار,JD";
+
+/* JOD currency format */
+"JOD.format" = "%@ JD";
+
+/* JPY currency variants */
+"JPY.variants" = "Japanese Yen,Yen,¥";
+
+/* JPY currency format */
+"JPY.format" = "¥ %@";
+
+/* KES currency variants */
+"KES.variants" = "Kenyan Shillings,Kenyan Shilling,KSh";
+
+/* KES currency format */
+"KES.format" = "%@ KSh";
+
+/* KGS currency variants */
+"KGS.variants" = "Kyrgyzstani Soms,Kyrgyzstani Som,Soms,Som,sом";
+
+/* KGS currency format */
+"KGS.format" = "%@ sом";
+
+/* KHR currency variants */
+"KHR.variants" = "Cambodian Riel,Riel,៛,Cambodian Riels,Riels";
+
+/* KHR currency format */
+"KHR.format" = "%@ R.";
+
+/* KMF currency variants */
+"KMF.variants" = "Comorian Francs,Comorian Franc,FC";
+
+/* KMF currency format */
+"KMF.format" = "%@ FC";
+
+/* KPW currency variants */
+"KPW.variants" = "North Korean won";
+
+/* KPW currency format */
+"KPW.format" = "￦ %@";
+
+/* KRW currency variants */
+"KRW.variants" = "South Korean Won,Won";
+
+/* KRW currency format */
+"KRW.format" = "￦ %@";
+
+/* KWD currency variants */
+"KWD.variants" = "Kuwaiti Dinars,Kuwaiti Dinar,د.ك,KD";
+
+/* KWD currency format */
+"KWD.format" = "%@ KD";
+
+/* KYD currency variants */
+"KYD.variants" = "Cayman Islands Dollars,Cayman Islands Dollar";
+
+/* KYD currency format */
+"KYD.format" = "$ %@";
+
+/* KZT currency variants */
+"KZT.variants" = "Kazakhstani Tenge,Tenge";
+
+/* KZT currency format */
+"KZT.format" = "%@ T";
+
+/* LAK currency variants */
+"LAK.variants" = "Lao Kips,Lao Kip,Kips,Kip";
+
+/* LAK currency format */
+"LAK.format" = "%@ K";
+
+/* LBP currency variants */
+"LBP.variants" = "Lebanese Pound,Lebanese Pounds,.ل.ل";
+
+/* LBP currency format */
+"LBP.format" = "%@ .ل.ل";
+
+/* LKR currency variants */
+"LKR.variants" = "Sri Lanka Rupee";
+
+/* LKR currency format */
+"LKR.format" = "Rs %@";
+
+/* LRD currency variants */
+"LRD.variants" = "Liberian Dollars,Liberian Dollar,L$";
+
+/* LRD currency format */
+"LRD.format" = "L$ %@";
+
+/* LSL currency variants */
+"LSL.variants" = "Lesotho maloti,Lesotho loti,loti,Maloti";
+
+/* LSL currency format */
+"LSL.format" = "M %@";
+
+/* LTL currency variants */
+"LTL.variants" = "Lithuanian Litas,Lithuanian Litai,Litas,Litai,Lt";
+
+/* LTL currency format */
+"LTL.format" = "%@ Lt";
+
+/* LVL currency variants */
+"LVL.variants" = "Latvian Lats,Lat,Latvian Lati,Lati,Latvian Latu,Latu,Ls";
+
+/* LVL currency format */
+"LVL.format" = "%@ Ls";
+
+/* LYD currency variants */
+"LYD.variants" = "Libyan Dinar,Libyan Dinars,د.ل";
+
+/* LYD currency format */
+"LYD.format" = "%@ LD";
+
+/* MAD currency variants */
+"MAD.variants" = "Moroccan Dirham,Moroccan Dirhams,د.م.";
+
+/* MAD currency format */
+"MAD.format" = "%@ Dh";
+
+/* MDL currency variants */
+"MDL.variants" = "Moldovan Leu,Moldovan Lei,Leu";
+
+/* MDL currency format */
+"MDL.format" = "%@ lei";
+
+/* MGA currency variants */
+"MGA.variants" = "Malagasy ariary,ariary";
+
+/* MGA currency format */
+"MGA.format" = "Ar %@";
+
+/* MKD currency variants */
+"MKD.variants" = "Macedonian Denar,Macedonian Denari,den.";
+
+/* MKD currency format */
+"MKD.format" = "%@ den.";
+
+/* MMK currency variants */
+"MMK.variants" = "Myanmar Kyat,Burmese kyat,kyat";
+
+/* MMK currency format */
+"MMK.format" = "K %@";
+
+/* MNT currency variants */
+"MNT.variants" = "Mongolian Tugrik,Tugrik,₮";
+
+/* MNT currency format */
+"MNT.format" = "%@ ₮";
+
+/* MOP currency variants */
+"MOP.variants" = "Macanese Pataca,Macao Pataca,Macau Pataca,Pataca,Macanese Patacas,Patacas,Macao Patacas,MOP$";
+
+/* MOP currency format */
+"MOP.format" = "MOP$ %@";
+
+/* MRO currency variants */
+"MRO.variants" = "Mauritanian ouguiya,ouguiya";
+
+/* MRO currency format */
+"MRO.format" = "%@ UM";
+
+/* MUR currency variants */
+"MUR.variants" = "Mauritius Rupee,Mauritius Rupees";
+
+/* MUR currency format */
+"MUR.format" = "Rs %@";
+
+/* MVR currency variants */
+"MVR.variants" = "Maldivian Rufiyaa,Rufiyaa,Rf";
+
+/* MVR currency format */
+"MVR.format" = "Rf %@";
+
+/* MWK currency variants */
+"MWK.variants" = "Malawian Kwacha,Kwacha";
+
+/* MWK currency format */
+"MWK.format" = "%@ MK";
+
+/* MXN currency variants */
+"MXN.variants" = "Mexican Peso,Mexican Pesos";
+
+/* MXN currency format */
+"MXN.format" = "$ %@";
+
+/* MYR currency variants */
+"MYR.variants" = "Malaysian Ringgit,Ringgit";
+
+/* MYR currency format */
+"MYR.format" = "RM %@";
+
+/* MZN currency variants */
+"MZN.variants" = "Mozambican Metical,Mozambican Meticais,Metical,Meticais";
+
+/* MZN currency format */
+"MZN.format" = "%@ MT";
+
+/* NAD currency variants */
+"NAD.variants" = "Namibian Dollar,Namibian Dollars,N$";
+
+/* NAD currency format */
+"NAD.format" = "N$ %@";
+
+/* NGN currency variants */
+"NGN.variants" = "Nigerian Naira,Naira,₦";
+
+/* NGN currency format */
+"NGN.format" = "%@ ₦";
+
+/* NIO currency variants */
+"NIO.variants" = "Nicaraguan Cordoba,Cordoba,Cordobas,Nicaraguan Cordobas,C$";
+
+/* NIO currency format */
+"NIO.format" = "C$ %@";
+
+/* NOK currency variants */
+"NOK.variants" = "Norwegian Krone,Norwegian Kroner";
+
+/* NOK currency format */
+"NOK.format" = "%@ kr";
+
+/* NPR currency variants */
+"NPR.variants" = "Nepalese Rupee,Nepalese Rupees,₨";
+
+/* NPR currency format */
+"NPR.format" = "₨ %@";
+
+/* NZD currency variants */
+"NZD.variants" = "New Zealand Dollar,New Zealand Dollars";
+
+/* NZD currency format */
+"NZD.format" = "$%@ NZD";
+
+/* OMR currency variants */
+"OMR.variants" = "Omani Rial,Omani Rials,ر.ع.,RO";
+
+/* OMR currency format */
+"OMR.format" = "%@ RO";
+
+/* PAB currency variants */
+"PAB.variants" = "Panamanian Balboa,Balboa,Panamanian Balboas,Balboas,B/.";
+
+/* PAB currency format */
+"PAB.format" = "%@ B/.";
+
+/* PEN currency variants */
+"PEN.variants" = "Peruvian Nuevo Sol,Nuevo Sol,Peruvian Nuevo Soles,Nuevo Soles,S/.";
+
+/* PEN currency format */
+"PEN.format" = "%@ S/.";
+
+/* PGK currency variants */
+"PGK.variants" = "Papua New Guinean Kina,Kina";
+
+/* PGK currency format */
+"PGK.format" = "%@ K";
+
+/* PHP currency variants */
+"PHP.variants" = "Philippine Peso,Philippine Pesos,₱";
+
+/* PHP currency format */
+"PHP.format" = "%@ ₱";
+
+/* PKR currency variants */
+"PKR.variants" = "Pakistan Rupee,Pakistan Rupees";
+
+/* PKR currency format */
+"PKR.format" = "Rs %@";
+
+/* PLN currency variants */
+"PLN.variants" = "Polish Zloty,Zloty,zł";
+
+/* PLN currency format */
+"PLN.format" = "%@ zł";
+
+/* PYG currency variants */
+"PYG.variants" = "Paraguayan Guarani,Guarani,Paraguayan Guaranies,Guaranies,₲";
+
+/* PYG currency format */
+"PYG.format" = "%@ ₲";
+
+/* QAR currency variants */
+"QAR.variants" = "Qatari Rial,Qatari Rials";
+
+/* QAR currency format */
+"QAR.format" = "%@ QR";
+
+/* RON currency variants */
+"RON.variants" = "Romanian Lei,Romanian Leu";
+
+/* RON currency format */
+"RON.format" = "%@ lei";
+
+/* RSD currency variants */
+"RSD.variants" = "Serbian Dinar,Serbian Dinars";
+
+/* RSD currency format */
+"RSD.format" = "%@ RSD";
+
+/* RUB currency variants */
+"RUB.variants" = "russian rouble,russian roubles,ru rouble,ru roubles,rus roubles,rus rouble,russian ruble,russian rubles,rouble,ruble,rubles,roubles,₽";
+
+/* RUB currency format */
+"RUB.format" = "%@ ₽";
+
+/* RWF currency variants */
+"RWF.variants" = "Rwandan franc,Rwandan francs";
+
+/* RWF currency format */
+"RWF.format" = "%@ RF";
+
+/* SAR currency variants */
+"SAR.variants" = "Saudi Riyal,Saudi Riyals,﷼‎,ر.س";
+
+/* SAR currency format */
+"SAR.format" = "%@ SR";
+
+/* SBD currency variants */
+"SBD.variants" = "Solomon Islands Dollar,Solomon Islands Dollars,SI$";
+
+/* SBD currency format */
+"SBD.format" = "SI$ %@";
+
+/* SCR currency variants */
+"SCR.variants" = "Seychelles Rupees,Seychelles Rupee,Seychellois Rupees,Seychellois Rupee";
+
+/* SCR currency format */
+"SCR.format" = "%@ SR";
+
+/* SDG currency variants */
+"SDG.variants" = "Sudanese Pound,Sudanese Pounds,ج.س.‏,£Sd";
+
+/* SDG currency format */
+"SDG.format" = "%@ £Sd";
+
+/* SEK currency variants */
+"SEK.variants" = "Swedish Krona,Swedish Kronor";
+
+/* SEK currency format */
+"SEK.format" = "%@ kr";
+
+/* SGD currency variants */
+"SGD.variants" = "Singapore Dollar,Singapore Dollars,S$";
+
+/* SGD currency format */
+"SGD.format" = "S$ %@";
+
+/* SHP currency variants */
+"SHP.variants" = "St Helena Pounds,St Helena Pound,Saint Helena pound,Saint Helena pounds";
+
+/* SHP currency format */
+"SHP.format" = "£%@ SHP";
+
+/* SLL currency variants */
+"SLL.variants" = "Sierra Leonean Leone,Sierra Leonean Leones,Leone,Leones";
+
+/* SLL currency format */
+"SLL.format" = "%@ Le";
+
+/* SOS currency variants */
+"SOS.variants" = "Somali Shillings,Somali Shilling,Sh.,So.";
+
+/* SOS currency format */
+"SOS.format" = "%@ So.";
+
+/* SRD currency variants */
+"SRD.variants" = "Surinamese Dollar,Surinamese Dollars";
+
+/* SRD currency format */
+"SRD.format" = "$ %@";
+
+/* SSP currency variants */
+"SSP.variants" = "South Sudanese pound,South Sudanese pounds";
+
+/* SSP currency format */
+"SSP.format" = "%@ SSP";
+
+/* STD currency variants */
+"STD.variants" = "São Tomé and Príncipe Dobra,São Tomé and Príncipe Dobras,Dobra,Dobras";
+
+/* STD currency format */
+"STD.format" = "%@ Db";
+
+/* SVC currency variants */
+"SVC.variants" = "El Salvador Colon,Salvadoran colon,Salvadoran colones";
+
+/* SVC currency format */
+"SVC.format" = "%@ ₡";
+
+/* SYP currency variants */
+"SYP.variants" = "Syrian Pound,Syrian Pounds,S£";
+
+/* SYP currency format */
+"SYP.format" = "S£ %@";
+
+/* SZL currency variants */
+"SZL.variants" = "Swazi Lilangeni,Lilangeni,Swazi Emalangeni,Emalangeni";
+
+/* SZL currency format */
+"SZL.format" = "E %@";
+
+/* THB currency variants */
+"THB.variants" = "Thai Baht,Baht,฿";
+
+/* THB currency format */
+"THB.format" = "฿ %@";
+
+/* TJS currency variants */
+"TJS.variants" = "Tajikistani Somoni,Somoni";
+
+/* TJS currency format */
+"TJS.format" = "%@ TJS";
+
+/* TMT currency variants */
+"TMT.variants" = "Turkmenistan Manat,Manat";
+
+/* TMT currency format */
+"TMT.format" = "%@ TMT";
+
+/* TND currency variants */
+"TND.variants" = "Tunisian Dinar,Tunisian Dinars,د.ت,TD";
+
+/* TND currency format */
+"TND.format" = "%@ TD";
+
+/* TOP currency variants */
+"TOP.variants" = "Tongan Paʻanga,Paʻanga,T$";
+
+/* TOP currency format */
+"TOP.format" = "T$ %@";
+
+/* TRY currency variants */
+"TRY.variants" = "Turkish Lira,₺";
+
+/* TRY currency format */
+"TRY.format" = "₺%@";
+
+/* TTD currency variants */
+"TTD.variants" = "Trinidad and Tobago Dollar,Trinidad and Tobago Dollars,TT$";
+
+/* TTD currency format */
+"TTD.format" = "TT$ %@";
+
+/* TWD currency variants */
+"TWD.variants" = "New Taiwan Dollars,New Taiwan Dollar,NT$,NT Dollar, NTD";
+
+/* TWD currency format */
+"TWD.format" = "NT$ %@";
+
+/* TZS currency variants */
+"TZS.variants" = "Tanzanian Shilling,Tanzanian Shillings,Tanzanian Shillingi,TSh";
+
+/* TZS currency format */
+"TZS.format" = "%@ TSh";
+
+/* UAH currency variants */
+"UAH.variants" = "Ukrainian Hryvnia,Ukrainian Hryvni,Ukrainian Hryven',Hryvnia,Hryvni,Hryven',₴,grn.";
+
+/* UAH currency format */
+"UAH.format" = "%@ UAH";
+
+/* UGX currency variants */
+"UGX.variants" = "Ugandan Shilling,Ugandan Shillings,USh";
+
+/* UGX currency format */
+"UGX.format" = "%@ USh";
+
+/* USD currency variants */
+"USD.variants" = "dollar USA,dollars USA,dollar,USD,dollars,U.S. Dollars,U.S. Dollar,USA Dollars,USA Dollar,$";
+
+/* USD currency format */
+"USD.format" = "$%@";
+
+/* UYU currency variants */
+"UYU.variants" = "Uruguayan Peso,Uruguayan Pesos,$U";
+
+/* UYU currency format */
+"UYU.format" = "$U %@";
+
+/* UZS currency variants */
+"UZS.variants" = "Uzbekistani som,som,so'm";
+
+/* UZS currency format */
+"UZS.format" = "%@ som";
+
+/* VEF currency variants */
+"VEF.variants" = "Venezuelan Bolívar,Venezuelan Bolivar,Venezuelan Bolívares,Venezuelan Bolivares,bolívar fuerte,bolivar fuerte,bolívares fuertes,Bs.F.";
+
+/* VEF currency format */
+"VEF.format" = "Bs.F. %@";
+
+/* VND currency variants */
+"VND.variants" = "Vietnamese Dong,Dong,₫";
+
+/* VND currency format */
+"VND.format" = "%@ ₫";
+
+/* VUV currency variants */
+"VUV.variants" = "Vanuatu Vatu,Vatu";
+
+/* VUV currency format */
+"VUV.format" = "%@ VT";
+
+/* WST currency variants */
+"WST.variants" = "Samoan Tala,Tala,WS$";
+
+/* WST currency format */
+"WST.format" = "WS$ %@";
+
+/* XAF currency variants */
+"XAF.variants" = "CFA Franc (Beac),Central African CFA franc,Central African CFA francs,CFA francs,CFA franc,Franc CFA BEAC,FCFA";
+
+/* XAF currency format */
+"XAF.format" = "%@ FCFA";
+
+/* XCD currency variants */
+"XCD.variants" = "East Caribbean Dollar,East Caribbean Dollars,EC$";
+
+/* XCD currency format */
+"XCD.format" = "EC$ %@";
+
+/* XOF currency variants */
+"XOF.variants" = "West African CFA franc,franc CFA BCEAO,CFA";
+
+/* XOF currency format */
+"XOF.format" = "%@ CFA";
+
+/* XPF currency variants */
+"XPF.variants" = "CFP Franc,CFP Francs,franc pacifique,francs pacifique";
+
+/* XPF currency format */
+"XPF.format" = "%@ F";
+
+/* YER currency variants */
+"YER.variants" = "Yemeni Rial,Yemeni Rials,﷼";
+
+/* YER currency format */
+"YER.format" = "%@ YER";
+
+/* ZAR currency variants */
+"ZAR.variants" = "South African Rand,Rand";
+
+/* ZAR currency format */
+"ZAR.format" = "R %@";
+
+/* ZMW currency variants */
+"ZMW.variants" = "Zambian Kwacha,Kwacha,ZMK";
+
+/* ZMW currency format */
+"ZMW.format" = "%@ ZMK";
+
+/* Bit variants */
+"bit.variants" = "bit,bits,b";
+
+/* Bit output format */
+"bit.format" = "b";
+
+/* Bit symbol */
+"bit.symbol" = "b";
+
+/* Byte variants */
+"byte.variants" = "byte,bytes,B";
+
+/* Byte output format */
+"byte.format" = "B";
+
+/* Byte symbol */
+"byte.symbol" = "B";
+
+/* 'Today' variants */
+"today.variants" = "today";
+
+/* 'Tomorrow' variants */
+"tomorrow.variants" = "tomorrow";
+
+/* 'Yesterday' variants */
+"yesterday.variants" = "yesterday";
+
+/* Local time variants */
+"local_time.variants" = "local,local timezone,local time zone";
+
+/* Current time function variants */
+"current_time.variants" = "time,now";
+/* gibi prefix */
+"gibi.prefix" = "gibi";
+
+/* gibi symbol */
+"gibi.symbol" = "Gi";
+
+/* kibi prefix */
+"kibi.prefix" = "kibi";
+
+/* kibi symbol */
+"kibi.symbol" = "Ki";
+
+/* zebi prefix */
+"zebi.prefix" = "zebi";
+
+/* zebi symbol */
+"zebi.symbol" = "Zi";
+
+/* yobi prefix */
+"yobi.prefix" = "yobi";
+
+/* yobi symbol */
+"yobi.symbol" = "Yi";
+
+
+/* mebi prefix */
+"mebi.prefix" = "mebi";
+
+/* mebi symbol */
+"mebi.symbol" = "Mi";
+/* pebi prefix */
+"pebi.prefix" = "pebi";
+
+/* pebi symbol */
+"pebi.symbol" = "Pi";
+
+/* tebi prefix */
+"tebi.prefix" = "tebi";
+
+/* tebi symbol */
+"tebi.symbol" = "Ti";
+
+/* exbi prefix */
+"exbi.prefix" = "exbi";
+
+/* exbi symbol */
+"exbi.symbol" = "Ei";
+
+/* Meter variants */
+"meter.variants" = "meter,metre,metres,meters,m";
+
+/* Meter output format */
+"meter.format" = "m";
+
+/* Meter SI symbol */
+"meter.symbol" = "m";
+
+/* Inch variants */
+"inch.variants" = "inches,inch,″";
+
+/* Inch format */
+"inch.format" = "″";
+
+/* Mile variants */
+"mile.variants" = "mile,miles,mi,mi.";
+
+/* Mile format */
+"mile.format" = "mi.";
+
+/* Foot variants */
+"foot.variants" = "foot,foots,ft,ft.,feet,feets";
+
+/* Foot format */
+"foot.format" = "ft";
+
+/* Yard variants */
+"yard.variants" = "yard,yards,yd,yd.";
+
+/* Yard format */
+"yard.format" = "yd";
+
+/* Point variants */
+"point.variants" = "point,points,pt,pt.";
+
+/* Point format */
+"point.format" = "pt";
+
+/* Cable variants */
+"cable.variants" = "cable,cables";
+
+/* Cable format */
+"cable.format" = "cable";
+
+/* League variants */
+"league.variants" = "league,leagues";
+
+/* League format */
+"league.format" = "league";
+
+/* Furlong variants */
+"furlong.variants" = "furlong,furlongs";
+
+/* Furlong format */
+"furlong.format" = "furlong";
+
+/* Nautical mile variants */
+"nautical_mile.variants" = "nmi,nautical mile,nautical miles,n.m.";
+
+/* Nautical mile format */
+"nautical_mile.format" = "n.m.";
+
+/* Chain variants */
+"chain.variants" = "chain,chains";
+
+/* Chain format */
+"chain.format" = "chain";
+
+/*
+  Numbers.strings
+  NumiFramework
+
+  Created by Dmitry Nikolaev on 03.11.15.
+  Copyright © 2015 Dmitry Nikolaev. All rights reserved.
+*/
+
+
+/* Hex numeral representation variants */
+"hex.variants" = "hex";
+
+/* Binary numeral representation variants */
+"binary.variants" = "binary,bin";
+
+/* Octal numeral representation variants */
+"octal.variants" = "octal";
+
+/* Decimal numeral representation variants */
+"decimal.variants" = "decimal,dec";
+
+/* Scientific numeral representation variants */
+"scientific.variants" = "scientific, sci, exp, exponent, exponential";/* Assignment variants */
+"assignment.variants" = "=,equal,is";
+/* Conversion operator variants (like 4 cm in meters) */
+"conversion.variants" = "in,into,as,to";
+
+/* Plus operator text variants */
+"plus.variants" = "+,with,plus,and";
+
+/* Minus operator text variants */
+"minus.variants" = "-,minus,without,subtract";
+
+/* Multiply operator text variants */
+"multiply.variants" = "*,times,multiplied by,multiply,mul,mult";
+
+/* Divide operator text variants */
+"divide.variants" = "/,divide,divide by,divided by";
+
+/* Sum function variants (Sum on all lines above) */
+"sum.variants" = "sum,total";
+
+/* Average function variants */
+"avg.variants" = "average,avg";
+
+/* Previous line function variants */
+"prev.variants" = "prev";
+
+/* Square root function variants */
+"sqrt.variants" = "sqrt,square root";
+
+/* Cubic root function variants */
+"cbrt.variants" = "cbrt,cubic root,cube root,cubed root";
+
+/* Percent text variants */
+"percent.variants" = "%,percent,percents,pct,pct.";
+
+/* Percent output format */
+"percent.format" = "%%";
+
+/* Percent of variants, like 'of' in '4% of 100' */
+"percent_of.variants" = "from,of";
+
+/* Percent off variants, like 'off' in '4% off 100' */
+"percent_off.variants" = "off";
+
+/* Percent on variants, like 'on' in '4% on 100' */
+"percent_on.variants" = "on";
+
+/* As a percent of variants */
+"as_a_percent_of.variants" = "as a % of,as a percent of";
+
+/* As a percent off variants */
+"as_a_percent_off.variants" = "as a % off,as a percent off,as a % decrease of,as a percent decrease of";
+
+/* As a percent on variants */
+"as_a_percent_on.variants" = "as a % on,as a percent on,as a % increase of,as a percent increase of";
+
+/* Percent of what is variants */
+"percent_of_what_is.variants" = "of what is";
+
+/* Percent off what is variants */
+"percent_off_what_is.variants" = "off what is";
+
+/* Percent on what is */
+"percent_on_what_is.variants" = "on what is";
+
+/* Welcome calculations at the first app run */
+"sample.welcome" = "# Sample
+8 / (45 - 20%)
+5 inches in cm
+$9 in Euro";
+
+/* Thousand variants */
+"thousand.variants" = "thousand,Thousand,thousands,Thousands,th.,th,k";
+
+/* Million variants */
+"million.variants" = "million,Million,millions,Millions,M";
+
+/* Billion variants */
+"billion.variants" = "billion,Billion,milliard,Milliard,billions,Billions,milliards,Milliards";
+
+/* Si exa prefix */
+"exa.prefix" = "exa";
+
+/* Si exa symbol */
+"exa.symbol" = "E";
+
+/* Si pico prefix */
+"pico.prefix" = "pico";
+
+/* Si pico symbol */
+"pico.symbol" = "p";
+
+/* Si nano prefix */
+"nano.prefix" = "nano";
+
+/* Si nano symbol */
+"nano.symbol" = "n";
+
+/* Si femto prefix */
+"femto.prefix" = "femto";
+
+/* Si femto symbol */
+"femto.symbol" = "f";
+
+/* Si micro prefix */
+"micro.prefix" = "micro";
+
+/* Si micro symbol */
+"micro.symbol" = "µ";
+
+/* Si mega prefix */
+"mega.prefix" = "mega";
+
+/* Si mega symbol */
+"mega.symbol" = "M";
+
+/* Si kilo prefix */
+"kilo.prefix" = "kilo";
+
+/* Si kilo symbol */
+"kilo.symbol" = "k";
+
+/* Si zepto prefix */
+"zepto.prefix" = "zepto";
+
+/* Si zepto symbol */
+"zepto.symbol" = "z";
+
+/* Si deci prefix */
+"deci.prefix" = "deci";
+
+/* Si deci symbol */
+"deci.symbol" = "d";
+
+/* Si zetta prefix */
+"zetta.prefix" = "zetta";
+
+/* Si zetta symbol */
+"zetta.symbol" = "Z";
+
+/* Si atto prefix */
+"atto.prefix" = "atto";
+
+/* Si atto symbol */
+"atto.symbol" = "a";
+
+/* Si tera prefix */
+"tera.prefix" = "tera";
+
+/* Si tera symbol */
+"tera.symbol" = "T";
+
+/* Si milli prefix */
+"milli.prefix" = "milli";
+
+/* Si milli symbol */
+"milli.symbol" = "m";
+
+/* Si centi prefix */
+"centi.prefix" = "centi";
+
+/* Si centi symbol */
+"centi.symbol" = "c";
+
+/* Si yotta prefix */
+"yotta.prefix" = "yotta";
+
+/* Si yotta symbol */
+"yotta.symbol" = "Y";
+
+/* Si giga prefix */
+"giga.prefix" = "giga";
+
+/* Si giga symbol */
+"giga.symbol" = "G";
+
+/* Si peta prefix */
+"peta.prefix" = "peta";
+
+/* Si peta symbol */
+"peta.symbol" = "P";
+
+/* Si yocto prefix */
+"yocto.prefix" = "yocto";
+
+/* Si yocto symbol */
+"yocto.symbol" = "y";
+
+/* Si deca prefix */
+"deca.prefix" = "deca";
+
+/* Si deca symbol */
+"deca.symbol" = "da";
+
+/* Si hecto prefix */
+"hecto.prefix" = "hecto";
+
+/* Si hecto symbol */
+"hecto.symbol" = "h";
+
+/* Celsius variants */
+"celsius.variants" = "celsius,C,°C";
+
+/* Celsius format */
+"celsius.format" = "°C";
+
+/* Fahrenheit variants */
+"fahrenheit.variants" = "fahrenheit,fahrenheits,F,°F";
+
+/* Fahrenheit format */
+"fahrenheit.format" = "°F";
+
+/* Kelvin variants */
+"kelvin.variants" = "kelvin,kelvins,K";
+
+/* Kelvin format */
+"kelvin.format" = "K";
+
+/* Second's time unit variants */
+"second.variants" = "s,sec,second,seconds";
+
+/* Second's time unit format */
+"second.format" = "s";
+
+/* Second's time unit symbol */
+"second.symbol" = "s";
+
+/* Minute variants */
+"minute.variants" = "min,minute,minutes";
+
+/* Minute format */
+"minute.format" = "min";
+
+/* Hour variants */
+"hour.variants" = "h,hr,hour,hours";
+
+/* Hour format */
+"hour.format" = "h";
+
+/* Day variants */
+"day.variants" = "day,days,d";
+
+/* Day format */
+"day.format" = "day";
+
+/* Week variants */
+"week.variants" = "week,w,weeks";
+
+/* Week format */
+"week.format" = "w";
+
+/* Month variants */
+"month.variants" = "month,monthes,months,mon,mon.";
+
+/* Month format */
+"month.format" = "mon.";
+
+/* Year variants */
+"year.variants" = "y,yr,year,years";
+
+/* Year format */
+"year.format" = "yr";
+
+/* Volume templates for compound units (like cubic cm, cubic inch), comma separated. Use %@ as a placeholder. For example, 'cubic %@' become 'cubic meter' for meters */
+"volume.templates" = "cu %@,cubic %@,cb %@,cb%@,%@³,%@ ³,%@3";
+
+/* Volume format for compound units (like cubic cm, cubic inch). Use %@ as a placeholder. For example, '%@³' become 'm³' for meters */
+"volume.format" = "%@³";
+
+/* Litre variants */
+"litre.variants" = "litre,litres,liter,liters,l,L";
+
+/* Litre format */
+"litre.format" = "L";
+
+/* Litre SI symbol */
+"litre.symbol" = "l";
+
+/* Cup volume variants */
+"cup.variants" = "cup,cups";
+
+/* Cup unit output format */
+"cup.format" = "cup";
+
+/* Tablespoon variants */
+"tablespoon.variants" = "tablespoon,tablespoons,table spoon,table spoons,tbsp.,tbsp,T.";
+
+/* Tablespoon format */
+"tablespoon.format" = "tbsp.";
+
+/* Teaspoon variants */
+"teaspoon.variants" = "teaspoon,teaspoons,tea spoon,tea spoons,t.,tsp.,tsp";
+
+/* Teaspoon format */
+"teaspoon.format" = "tsp.";
+
+/* Quart volume variants */
+"quart.variants" = "quart,quarts,qt.,qt";
+
+/* Quart unit output format */
+"quart.format" = "qt.";
+
+/* pint variants */
+"pint.variants" = "pint,pints";
+
+/* Pint format */
+"pint.format" = "pint";
+
+/* Gallon variants */
+"gallon.variants" = "gallon,gallons,gal.,gal";
+
+/* Gallon format */
+"gallon.format" = "gal.";
+
+/* Cubic inch variants */
+"cbinch.variants" = "c.i.,CI,cui,cu inch";
+
+/* Cubic centimeter variants */
+"cbcm.variants" = "cc,ccm";
+
+/* Gram variants */
+"gram.variants" = "gram,gramme,grams,grammes,g";
+
+/* Gram format */
+"gram.format" = "g";
+
+/* Gram SI symbol */
+"gram.symbol" = "g";
+
+/* Tonne variants */
+"tonne.variants" = "tonne,tonnes,t,metric ton";
+
+/* Tonne format */
+"tonne.format" = "t";
+
+/* Tonne SI symbol */
+"tonne.symbol" = "t";
+
+/* Stone weight unit variants */
+"stone.variants" = "stone,stones,st";
+
+/* Stone weight unit format */
+"stone.format" = "st";
+
+/* Carat variants */
+"carat.variants" = "carat,carats,CD,ct";
+
+/* Carat format */
+"carat.format" = "ct";
+
+/* Pound variants */
+"pound.variants" = "pound,pounds,lb,lbm";
+
+/* Pound format */
+"pound.format" = "lb";
+
+/* Centner variants */
+"centner.variants" = "centner,quintal,centners,quintals";
+
+/* Centner format */
+"centner.format" = "centner";
+
+/* Ounce variants */
+"ounce.variants" = "ounce,ounces,oz";
+
+/* Ounce format */
+"ounce.format" = "oz";

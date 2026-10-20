@@ -1,0 +1,181 @@
+.app {
+	--side-padding: 2px;
+	background-color: #212226;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding-left: var(--side-padding);
+	padding-right: var(--side-padding);
+}
+
+.titlebar {
+	display: flex;
+	-webkit-app-region: drag;
+	box-sizing: border-box;
+	margin-top: 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	user-select: none;
+	cursor: default;
+}
+
+.platform-win32 .titlebar {
+	margin-top: 5px;
+}
+
+/* Windows and macOS keep their native window controls. Linux uses the
+   in-app controls below because the window is frameless there. */
+.platform-win32 .titlebar,
+.platform-darwin .titlebar {
+	display: none;
+}
+
+.titlebar .leftControls {
+	flex: 1;
+}
+
+.titlebar .title {
+	flex: 2;
+	font-family: "SF Pro Display", sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	color: #505054;
+}
+
+.titlebar .rightControls {
+	flex: 1;
+	align: right;
+	display: flex;
+	justify-content: flex-end;
+	transition: background 0.2s linear;
+	margin-right: 6px;
+	-webkit-app-region: no-drag;
+}
+
+.titlebar .control:hover {
+	opacity: 1;
+}
+
+.titlebar .control {
+	width: 16px;
+	height: 16px;
+	background-size: cover;
+	cursor: pointer;
+	margin: 3px;
+	opacity: 0.3;
+	display: none;
+	-webkit-app-region: no-drag;
+}
+
+.platform-win32 .titlebar .control {
+	display: block;
+}
+
+.platform-linux .titlebar .control {
+	display: block;
+	width: 13px;
+	height: 13px;
+	margin: 3px;
+	border-radius: 50%;
+	background: #77787d;
+	background-image: none;
+	opacity: 1;
+}
+
+.platform-linux .titlebar .control:hover { background: #a7a8ad; }
+.platform-linux .titlebar #minimize { background: #febc2e; }
+.platform-linux .titlebar #close { background: #ff5f57; }
+.platform-linux .titlebar #minimize:hover { background: #ffd15c; }
+.platform-linux .titlebar #close:hover { background: #ff817b; }
+
+#minimize {
+	background-image: url("/minimize.svg");
+}
+
+#close {
+	background-image: url("/close.svg");
+}
+
+.editor_container {
+	flex-grow: 1;
+	box-sizing: border-box;
+	--side-offset: 23px;
+	--top-offset: 5px;
+	--bottom-offset: 4px;
+	padding-top: var(--top-offset);
+	padding-left: var(--side-offset);
+	/* compensating right offset for bg selection */
+	padding-right: calc(var(--side-offset) + 8px);
+	padding-bottom: var(--bottom-offset);
+}
+
+.platform-darwin .editor_container {
+	padding-top: 8px;
+}
+
+.bottombar {
+	position: relative;
+	--side-margin: 2px;
+	box-sizing: border-box;
+	font-family: "SF Pro Text", sans-serif;
+	height: 30px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #464646;
+	line-height: 1;
+	user-select: none;
+	margin-left: var(--side-margin);
+	margin-right: var(--side-margin);
+	padding: 0px 6px;
+	margin-top: 9px;
+}
+
+.bottombar .version {
+	float: left;
+	user-select: none;
+	padding: 4px 6px;
+	cursor: default;
+}
+
+.bottombar .update {
+	line-height: 1;
+	user-select: none;
+	padding: 4px 6px;
+	margin-left: 6px;
+	color: #212226;
+	background: #464646;
+	border-radius: 4px;
+	float: left;
+	cursor: pointer;
+	transition: background 0.2s linear;
+	/* Transition effect */
+	transition: opacity 0.25s linear;
+	/* Transition effect */
+}
+
+.bottombar .update:hover {
+	background: #696969;
+}
+
+.bottombar .precision {
+	float: right;
+	user-select: none;
+	padding: 0px 6px;
+	cursor: pointer;
+}
+
+.bottombar .hint {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.25s linear;
+	/* Transition effect */
+	padding-bottom: 11px;
+}
+
+.hidden {
+	opacity: 0;
+}

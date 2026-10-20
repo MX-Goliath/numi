@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+dist
+artifacts
+out/
+yarn-error.log
+patch
+.env

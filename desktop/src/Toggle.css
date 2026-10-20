@@ -1,0 +1,4 @@
+.toggle { width: 24px; height: 14px; padding: 2px; border: 0; border-radius: 8px; background: #45464b; cursor: pointer; transition: background .15s; }
+.toggle span { display: block; width: 10px; height: 10px; border-radius: 50%; background: #9b9b9d; transition: transform .15s, background .15s; }
+.toggle.on { background: #706f69; }
+.toggle.on span { transform: translateX(10px); background: #eeeade; }

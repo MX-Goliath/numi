@@ -36,3 +36,7 @@ Most features of the Numi for macOS are supported in terminal. However, these ar
 -   CSS
 -   Variables
 -   Plugins/extension
+
+## Recovered desktop source
+
+The Electron desktop source is in [`desktop/`](desktop/). It includes the React interface and Rust calculator bridge recovered from the 0.1.15 Windows release. See [`desktop/BUILDING.md`](desktop/BUILDING.md) for Linux AppImage and Windows build commands.

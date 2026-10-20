@@ -1,0 +1,157 @@
+.multieditor {
+	--background-color: transparent;
+	--font-size: 15px;
+	--font-family: "SF Mono", "Consolas", Menlo, Monaco, "Courier New", monospace;
+	--font-weight: 500;
+	--line-height: 1.9;
+	--text-color: #c8c7c0;
+	--text-color-textarea: transparent;
+	--caret-color: #f5f5f5;
+	/* something weird with color selection without transparency */
+	--selection-background-color: #3b3b3aee;
+	/* controlled dynamically in MultiEditor.jsx */
+	--result-width: 100px;
+	--result-background-color: transparent;
+	--result-color: #edebdf;
+	--result-vert-padding: 0px;
+	--result-horiz-padding: 7px;
+}
+
+.multieditor {
+	width: 100%;
+	height: 100%;
+	background-color: var(--background-color);
+	position: relative;
+}
+
+.editor,
+.highlights {
+	width: calc(100% - var(--result-width));
+	height: 100%;
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+	font-family: var(--font-family);
+	line-height: var(--line-height);
+	white-space: break-spaces;
+	word-break: break-all;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	/* slight padding so no trim for the first value bg selection */
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: var(--result-width);
+}
+
+.separator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - var(--result-width));
+	height: 100%;
+	margin-right: var(--result-width);
+	border-right: 1px solid #2D2D2D;
+	margin-top: 4px;
+	margin-left: 6px;
+	pointer-events: none;
+}
+
+.editor {
+	color: var(--text-color-textarea);
+	background-color: transparent;
+	caret-color: var(--caret-color);
+	resize: none;
+	outline: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.editor::selection {
+	background-color: var(--selection-background-color);
+}
+
+.editor::-webkit-scrollbar {
+	display: none;
+}
+
+.highlights {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	pointer-events: none;
+	color: var(--text-color);
+}
+
+.line {
+	position: relative;
+	display: block;
+}
+
+.result {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	position: absolute;
+	right: calc(-1 * var(--result-width));
+	bottom: 0;
+	width: var(--result-width);
+	background-color: var(--result-background-color);
+	overflow: hidden;
+	user-select: none;
+	/* compensate trim for transform when value selected */
+	padding-right: 1px;
+}
+
+.result:hover {
+	overflow: visible;
+}
+
+.value {
+	/* This line prevent scrolling on the result area */
+	pointer-events: auto;
+	display: block;
+	white-space: nowrap;
+	text-align: right;
+	color: var(--result-color);
+	cursor: pointer;
+	padding: var(--result-horiz-padding);
+	padding-top: var(--result-vert-padding);
+	padding-bottom: var(--result-vert-padding);
+	position: relative;
+	top: var(--result-vert-padding);
+	border-radius: 5px;
+	user-select: none;
+}
+
+.value:hover {
+	background: #3b3b3a;
+	transition: background 0.1s linear;
+}
+
+.value.pressed {
+	transform: translate(1px, 1px);
+}
+
+/* Syntax highlight */
+
+.sh_number {
+	color: #e3e7e9;
+}
+
+.sh_op {
+	color: #6cc4ee;
+}
+
+.sh_unit {
+	color: #bdd4d2;
+}
+
+.sh_func {
+	color: #6cc4ee;
+}
+
+.sh_var {
+	color: #6cc4ee;
+}

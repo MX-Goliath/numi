@@ -1,0 +1,21 @@
+{
+	"name": "nnn",
+	"version": "0.1.0",
+	"description": "",
+	"main": "index.node",
+	"scripts": {
+		"prepare": "rustup target add x86_64-apple-darwin && rustup target add aarch64-apple-darwin",
+		"test": "cargo test",
+		"cargo-build": "cargo build --message-format=json > cargo.log",
+		"postcargo-build": "neon dist < cargo.log",
+		"postcross-build": "neon dist -m /target < cross.log",
+		"debug": "rimraf index.node && yarn cargo-build --",
+		"build": "rimraf index.node && yarn cargo-build -- --release"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@neon-rs/cli": "0.1.68",
+		"rimraf": "^5.0.7"
+	}
+}
