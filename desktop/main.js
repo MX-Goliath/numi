@@ -41,4 +41,28 @@ ipcMain.on('window-control', (_event, action) => {
   if (action === 'maximize') win.isMaximized() ? win.unmaximize() : win.maximize();
   if (action === 'close') win.close();
 });
-app.whenReady().then(async () => { if (process.argv.includes('--clear')) { await session.defaultSession.clearStorageData({ storages: ['localstorage'] }); settings.unsetSync('window'); } createWindow(); app.on('window-all-closed', () => app.quit()); void numiModel.start(); if (win) win.webContents.send('on-engine-start'); if (isSmoke) setTimeout(() => app.exit(0), 1200); });
+async function smokeTest() {
+  const timeout = setTimeout(() => { console.error('Smoke test timed out'); app.exit(1); }, 15000);
+  try {
+    if (win.webContents.isLoading()) await new Promise(resolve => win.webContents.once('did-finish-load', resolve));
+    const result = await win.webContents.executeJavaScript(`(async () => {
+      const deadline = Date.now() + 10000;
+      while (!document.querySelector('textarea') || !document.querySelector('.version')?.textContent.includes('${app.getVersion()}')) {
+        if (Date.now() > deadline) throw new Error('Calculator interface did not load');
+        await new Promise(resolve => setTimeout(resolve, 50));
+      }
+      const output = await window.electronAPI.numiModelCalc(JSON.stringify({ input: ['2 meters in cm', '1 Hz in s'], options: { precision: 2 } }));
+      return JSON.parse(output).result.map(line => line.value);
+    })()`);
+    if (JSON.stringify(result) !== JSON.stringify(['200 cm', '1 s'])) throw new Error(`Unexpected calculator results: ${JSON.stringify(result)}`);
+    if (!win.isVisible()) throw new Error('Calculator window is not visible');
+    console.log(`Smoke test passed: Numi ${app.getVersion()}, renderer, native bridge, unit and wave conversions`);
+    clearTimeout(timeout);
+    app.exit(0);
+  } catch (error) {
+    console.error(error);
+    app.exit(1);
+  }
+}
+
+app.whenReady().then(async () => { if (process.argv.includes('--clear')) { await session.defaultSession.clearStorageData({ storages: ['localstorage'] }); settings.unsetSync('window'); } createWindow(); app.on('window-all-closed', () => app.quit()); void numiModel.start(); if (win) win.webContents.send('on-engine-start'); if (isSmoke) void smokeTest(); });

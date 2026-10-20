@@ -1,0 +1,78 @@
+name: Build release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build ${{ matrix.platform }} x64
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux
+            os: ubuntu-22.04
+          - platform: windows
+            os: windows-2022
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: desktop
+    env:
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            desktop/numi-module
+            desktop/numi-module/numi-rs
+      - name: Install Linux packaging tools
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl-dev pkg-config rpm xvfb
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:engine
+      - name: Package Linux
+        if: runner.os == 'Linux'
+        run: npx electron-builder --linux AppImage deb rpm tar.gz --x64 --publish never
+      - name: Test Linux AppImage with inherited Node mode
+        if: runner.os == 'Linux'
+        run: |
+          chmod +x artifacts/Numi-1.0.0-linux-x64.AppImage
+          ELECTRON_RUN_AS_NODE=1 xvfb-run -a artifacts/Numi-1.0.0-linux-x64.AppImage --appimage-extract-and-run --no-sandbox --smoke-test
+      - name: Package Windows
+        if: runner.os == 'Windows'
+        run: npx electron-builder --win nsis portable zip --x64 --publish never
+      - name: Test Windows package with inherited Node mode
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $env:ELECTRON_RUN_AS_NODE = '1'
+          $app = Start-Process -FilePath 'artifacts/win-unpacked/Numi.exe' -ArgumentList '--smoke-test' -PassThru -Wait
+          if ($app.ExitCode -ne 0) { throw "Packaged application failed: $($app.ExitCode)" }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: numi-${{ matrix.platform }}-x64
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            desktop/artifacts/*.AppImage
+            desktop/artifacts/*.deb
+            desktop/artifacts/*.rpm
+            desktop/artifacts/*.tar.gz
+            desktop/artifacts/*.exe
+            desktop/artifacts/*.zip

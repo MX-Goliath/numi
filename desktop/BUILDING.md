@@ -2,17 +2,24 @@
 
 The desktop sources were recovered from the 0.1.15 Windows release. The calculator engine is Rust and the interface is React/Vite inside Electron.
 
-Requirements: Node.js 22+, npm, Rust/Cargo, and a C compiler.
+Requirements: Node.js 22.12+, npm, Rust/Cargo, and a C compiler.
 
 ```sh
-npm install
+npm ci
+npm run build
 npm test
 npm run appimage
 ```
 
-`npm run appimage` writes `artifacts/Numi-0.1.15.AppImage`. Run it with `chmod +x artifacts/Numi-0.1.15.AppImage && ./artifacts/Numi-0.1.15.AppImage`.
+`npm run appimage` writes `artifacts/Numi-1.0.0-linux-x64.AppImage`. Run it with `chmod +x artifacts/Numi-1.0.0-linux-x64.AppImage && ./artifacts/Numi-1.0.0-linux-x64.AppImage`.
 
-On Windows, run `npm run windows` from a Windows checkout with Rust and the MSVC build tools. That builds the native `.node` module for Windows and creates the NSIS installer. Linux can prepare the unpacked Windows directory, but cannot sign or build the NSIS installer without Wine. The source does not depend on the release archive or the original update servers.
+Packaged builds disable Electron's RunAsNode fuse so they open normally even when a terminal or file manager passes down `ELECTRON_RUN_AS_NODE=1`.
+
+On Windows, run `npm run windows` from a Windows checkout with Rust and the MSVC build tools. That builds the native `.node` module for Windows and creates an NSIS installer, a portable executable, and a ZIP archive. The source does not depend on the release archive or the original update servers.
+
+Run `npm run linux` to build AppImage, DEB, RPM, and tar.gz packages for Linux x64. DEB and RPM packaging needs the distribution packaging tools.
+
+The GitHub Actions workflow `Build release` builds Linux packages on Ubuntu 22.04 and Windows packages on Windows Server 2022. It runs the engine tests and checks that the packaged interface and calculator work even with `ELECTRON_RUN_AS_NODE=1`. The downloadable build artifacts contain the files for a GitHub Release.
 
 The calculator works offline for arithmetic, dates, functions, and unit conversions. Currency rates refresh when the network is available and use cached values otherwise.
 

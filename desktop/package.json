@@ -1,6 +1,6 @@
 {
   "name": "numi-desktop",
-  "version": "0.1.15",
+  "version": "1.0.0",
   "author": "nyko",
   "description": "Numi desktop calculator, restored from the 0.1.15 release.",
   "main": "main.js",
@@ -17,7 +17,8 @@
     "test:engine": "cargo test --locked --manifest-path numi-module/numi-rs/Cargo.toml",
     "test:smoke": "npm run build && electron . --smoke-test",
     "appimage": "npm run build && electron-builder --linux AppImage --x64",
-    "windows": "npm run build && electron-builder --win nsis --x64"
+    "windows": "npm run build && electron-builder --win nsis portable zip --x64",
+    "linux": "npm run build && electron-builder --linux AppImage deb rpm tar.gz --x64"
   },
   "devDependencies": {
     "@electron-forge/cli": "7.11.2",
@@ -43,6 +44,9 @@
     "appId": "local.numi.desktop",
     "productName": "Numi",
     "asar": true,
+    "electronFuses": {
+      "runAsNode": false
+    },
     "asarUnpack": [
       "numi-module/**/*.node"
     ],
@@ -56,23 +60,34 @@
     ],
     "linux": {
       "target": [
-        "AppImage"
+        "AppImage",
+        "deb",
+        "rpm",
+        "tar.gz"
       ],
       "category": "Utility",
-      "icon": "assets/icons/png"
+      "icon": "assets/icons/png",
+      "maintainer": "MX-Goliath <MX-Goliath@users.noreply.github.com>"
     },
     "win": {
       "target": [
-        "nsis"
+        "nsis",
+        "portable",
+        "zip"
       ],
       "icon": "assets/icons/win/icon.ico"
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "${productName}-${version}-windows-${arch}-setup.${ext}"
     },
     "directories": {
       "output": "artifacts"
+    },
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "portable": {
+      "artifactName": "${productName}-${version}-windows-${arch}-portable.${ext}"
     }
   }
 }
